@@ -34,7 +34,8 @@ def evaluate_canonical_form(canonical_form,value):
 
 
 def get_rng(value):
-    return randint(1,value)
+    return np.random.randint(low=1, high=value+1)
+
 
 
 #the chance that returns a wrong answer is no more than 1/n
@@ -47,7 +48,6 @@ def randomized_algorithm(product_form,canonical_form,degree):
 
 
 def main():
-    seed(1)
     # (x + 1)(x − 2)(x + 3)(x − 4)(x + 5)(x − 6)
     product_form = [1,-2,3,-4,5,-6]
     #  x^6 − 7x^3 + 25
